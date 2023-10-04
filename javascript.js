@@ -11,13 +11,14 @@ $(function() {
     $("#submit").click(function login(){
         
         let username = $("#username").val();
-        console.log(username);
         let password = $("#password").val();
 
-        if ((username = "test") && (password = "password")){
+        if ((username == "test") && (password == "password")){
             console.log("hooray youve logged in");
+        }
+        else {
+            alert("Inncorrect, please enter you details again");
         };
-
     });
 
 });
