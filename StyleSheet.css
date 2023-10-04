@@ -2,8 +2,10 @@
 
     width:auto;
     height: 1200px;
-    border:solid rgb(80, 80, 80) 3px;
+    border:solid rgb(189, 189, 189) 3px;
+    background-color: rgb(189, 189, 189);
     padding:10px;
+    border-radius: 2%;
 
 }
 #navbar{
@@ -34,15 +36,23 @@
 body{
     background-color: rgb(216, 216, 216);
     align-items: center;
+    border-radius: 2%;
 
 }
 #loginDiv{
-    background-color: rgb(82, 82, 76);
-    border: solid rgb(82, 82, 75) 2px;
-    height:800px;
+    background-color: rgb(129, 156, 158);
+    height:98%;
     text-align: center;
+    font-size: 30px;
+    padding:10px;
+    border-radius: 2%;
+    box-shadow:   4px 2px rgb(91, 108, 109);
+    
+}
+#submit{
+    font-size: 60px;
 }
 .textBox{
     background-color: lightblue;
-    
+    font-size: 30px;
 }
