@@ -2,7 +2,7 @@
 
     width:auto;
     height: 1200px;
-    border:solid black 3px;
+    border:solid rgb(80, 80, 80) 3px;
     padding:10px;
 
 }
@@ -35,4 +35,14 @@ body{
     background-color: rgb(216, 216, 216);
     align-items: center;
 
+}
+#loginDiv{
+    background-color: rgb(82, 82, 76);
+    border: solid rgb(82, 82, 75) 2px;
+    height:800px;
+    text-align: center;
+}
+.textBox{
+
+    background-color: lightblue;
 }
