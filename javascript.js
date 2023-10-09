@@ -21,6 +21,12 @@ $(function() {
             alert("Incorrect, please enter you details again");
         };
     });
-
+    
+    const myChart = new Chart("#healthGraph", {
+        type: "line",
+        data: {x:60, y:"05/10/23"},
+        options: {}
+        
+    });
 
 });
