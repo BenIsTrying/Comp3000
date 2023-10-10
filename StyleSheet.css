@@ -2,21 +2,19 @@
 
     width:auto;
     height: 1200px;
-    border:solid rgb(189, 189, 189) 3px;
-    background-color: rgb(189, 189, 189);
+    border:solid rgb(180, 180, 180, 0.308) 3px;
+    background-color: rgba(180, 180, 180, 0.089);
     padding:10px;
-    border-radius: 2%;
 
 }
 #navbar{
 
     width:auto;
     height: 47px;
-    border:solid rgba(45, 45, 46, 0.067) 3px;
-    background-color: rgba(77, 77, 74);
+    border:solid rgb(199, 199, 199) 3px;
+    background-color: rgb(173, 173, 173);
     font-size: 40px;
-    align-self: center;
-    
+    align-self: center; 
 
 }
 .navbarButton{
@@ -24,7 +22,7 @@
     width:100px;
     height:100px;
     color:rgb(40, 71, 77);
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(221, 221, 221);
     border: solid grey 2px;
 
 
@@ -34,7 +32,7 @@
     color:white;
   }
 body{
-    background-color: rgb(216, 216, 216);
+    background-color: rgba(190, 186, 186, 0.418);
     align-items: center;
     border-radius: 2%;
 
