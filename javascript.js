@@ -15,7 +15,7 @@ $(function() {
 
         if ((username == "test") && (password == "password")){
             console.log("hooray youve logged in");
-            window.location = 'Index.html';//allows user to access the other pages
+            window.location = 'Main.html';//allows user to access the other pages
         }
         else {
             alert("Incorrect, please enter you details again");
