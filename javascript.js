@@ -1,13 +1,18 @@
-/*
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword"
-});
-*/
+
+
 $(function() {
+    
+    $("#sqlConnection").click(function SQL(){
+        var mysql = require('mysql');
+
+        var con = mysql.createConnection({
+            host: "localhost",
+            user: "yourusername",
+            password: "yourpassword"
+        });
+    })
+
     $("#submit").click(function login(){
         
         let username = $("#username").val();
@@ -22,11 +27,15 @@ $(function() {
         };
     });
     
-    const myChart = new Chart("#healthGraph", {
-        type: "line",
-        data: {x:60, y:"05/10/23"},
-        options: {}
-        
-    });
+    $("#showTable").click(function Graph(){
+
+        const healthChart = new Chart("healthChart", {
+            type: "line",
+            data: {},
+            options: {}
+        });
+
+    })
+    
 
 });
