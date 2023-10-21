@@ -1,6 +1,4 @@
 
-
-
 $(function() {
     
     $("#sqlConnection").click(function SQL(){
