@@ -1,13 +1,16 @@
-/*
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword"
-});
-*/
+
 $(function() {
+
+    var mysql = require('mysql');
+
+    var con = mysql.createConnection({
+    host: "COMP3000_BGeorge",
+    user: "COMP3000_BGeorge",
+    password: "ZgdF769+"
+    });
+
+
     $("#submit").click(function login(){
         
         let username = $("#username").val();
