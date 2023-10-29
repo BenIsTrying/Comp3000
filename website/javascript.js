@@ -24,15 +24,22 @@ $(function() {
         };
     });
     
-    $("#showTable").click(function Graph(){
-
-        const healthChart = new Chart("healthChart", {
-            type: "line",
-            data: {},
-            options: {}
-        });
-
-    })
     
+    
+
+});
+$(function Graph() {
+
+
+
+
+    const healthChart = new Chart("healthChart", {
+        type: "line",
+        data: {},
+        options: {}
+    });
+
+  
+
 
 });
