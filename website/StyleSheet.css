@@ -78,3 +78,7 @@ body{
     float: right;
 
 }
+#title{
+    text-decoration: underline;
+    text-align: center;
+}
