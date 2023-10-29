@@ -83,3 +83,12 @@ body{
     text-decoration: underline;
     text-align: center;
 }
+#blockOfText{
+
+    width: 98%;
+    background-color: rgb(196, 193, 193);
+    padding:1%;
+    border:solid rgb(83, 83, 83);
+    float: center;
+
+}
