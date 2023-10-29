@@ -44,7 +44,7 @@ body{
     font-size: 30px;
     padding:10px;
     border-radius: 2%;
-    box-shadow:   4px 2px rgb(91, 108, 109);
+    box-shadow: 4px 2px rgb(91, 108, 109);
     
 }
 #submit{
@@ -69,6 +69,7 @@ body{
     padding:1%;
     border:solid rgb(83, 83, 83);
     float: right;
+
 }
 #graphBox{
     width: 59%;
