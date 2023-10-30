@@ -5,7 +5,7 @@
     border:solid rgb(180, 180, 180, 0.308) 3px;
     background-color: rgba(180, 180, 180, 0.089);
     padding:10px;
-
+    
 }
 #navbar{
 
@@ -61,7 +61,7 @@ body{
     padding:1%;
     border:solid rgb(83, 83, 83);
     float:left;
-
+   
 
 }
 .biggerInfoBox{
@@ -78,6 +78,7 @@ body{
     padding:1%;
     border:solid rgb(83, 83, 83);
     float: right;
+    
 
 }
 #title{
@@ -86,7 +87,7 @@ body{
 }
 #blockOfText{
 
-    width: 98%;
+    width: 97%;
     background-color: rgb(196, 193, 193);
     padding:1%;
     border:solid rgb(83, 83, 83);

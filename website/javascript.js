@@ -95,14 +95,14 @@ $(function StepData() {
     var mysql = require('mysql');
     
     var con = mysql.createConnection({
-        host: "COMP3000_BGeorge",
+        host: "proj-mysql.uopnet.plymouth.ac.uk",
         user: "COMP3000_BGeorge",
         password: "ZgdF769+"
     });
 
     sql.connect(config)
       var request = new sql.Request();
-      request.query("select User_Name from Testusers")
+      request.query("select * from Testusers")
     
 });
 
