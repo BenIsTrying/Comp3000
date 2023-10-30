@@ -90,3 +90,20 @@ $(function WeightGraph() {
 
 
 });
+$(function StepData() {
+
+    var mysql = require('mysql');
+    
+    var con = mysql.createConnection({
+        host: "COMP3000_BGeorge",
+        user: "COMP3000_BGeorge",
+        password: "ZgdF769+"
+    });
+
+    sql.connect(config)
+      var request = new sql.Request();
+      request.query("select User_Name from Testusers")
+    
+});
+
+
