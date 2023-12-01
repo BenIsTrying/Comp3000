@@ -1,14 +1,9 @@
 
+
 $(function() {
 
     $("#sqlConnection").click(function SQL(){
-        var mysql = require('mysql');
-
-        var con = mysql.createConnection({
-        host: "COMP3000_BGeorge",
-        user: "COMP3000_BGeorge",
-        password: "ZgdF769+"
-        });
+        console.log("yeah this will connect to the database");
     });
 
     $("#submit").click(function login(){
