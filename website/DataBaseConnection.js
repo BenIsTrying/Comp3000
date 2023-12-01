@@ -19,4 +19,8 @@ con.connect(function(err) {
       if (err) throw err;
       console.log(result);
     });
+    con.query("SELECT * FROM Weight", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+      });
 });
