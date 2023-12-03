@@ -4,6 +4,7 @@ $(function() {
 
     $("#sqlConnection").click(function SQL(){
         console.log("yeah this will connect to the database");
+        
     });
 
     $("#submit").click(function login(){
@@ -25,9 +26,9 @@ $(function() {
 
 });
 
-$(function Graph() {
+$(function StepTable() {
 
-
+    console.log("step table here");
 
     
 })
