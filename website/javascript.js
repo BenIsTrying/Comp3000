@@ -95,17 +95,7 @@ $(function WeightGraph() {
 });
 $(function StepData() {
 
-    var mysql = require('mysql');
-    
-    var con = mysql.createConnection({
-        host: "proj-mysql.uopnet.plymouth.ac.uk",
-        user: "COMP3000_BGeorge",
-        password: "ZgdF769+"
-    });
-
-    sql.connect(config)
-      var request = new sql.Request();
-      request.query("select * from Testusers")
+   
     
 });
 

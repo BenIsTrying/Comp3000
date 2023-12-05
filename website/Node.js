@@ -14,11 +14,6 @@ server.listen(port, function() {
 console.log("Server listening on port " + port);
 });
 
-
-
-
-
-
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
