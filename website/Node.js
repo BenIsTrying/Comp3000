@@ -5,9 +5,8 @@ const express = require('express')
 const app = express()
 
 
-function sayHello() {
-return "Hello World from Node";
-}
+
+
 
 
 
@@ -31,16 +30,23 @@ con.connect(function(err) {
     app.get("/", (req,res) => {
       
     
-    con.query("SELECT * FROM Steps", function (err, result, fields) {
+    con.query("SELECT * FROM Steps, Weight", function (err, result, fields) {
       if (err) throw err;
-      res.send(result)
-      console.log(result);
+      res.send(result);
+
+      //console.log(result);
     });
-  })
-    con.query("SELECT * FROM Weight", function (err, result, fields) {
+  
+    /*
+    con.query("SELECT * FROM Weight", function (err, resultW, fields) {
         if (err) throw err;
-        console.log(result);
+        
+        //console.log(result);
+        res.send(resultW);
+
       });
+      */
+    })
 });
 
 app.listen(port,() => {

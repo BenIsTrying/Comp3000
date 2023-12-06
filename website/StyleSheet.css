@@ -2,8 +2,8 @@
 
     width:auto;
     height: 1200px;
-    border:solid rgb(180, 180, 180, 0.308) 3px;
-    background-color: rgba(180, 180, 180, 0.089);
+    border:solid rgba(209, 133, 133, 0.137);
+    background-color: rgba(255, 242, 227);
     padding:10px;
     
 }
@@ -11,8 +11,8 @@
 
     width:auto;
     height: 47px;
-    border:solid rgb(199, 199, 199) 3px;
-    background-color: rgb(173, 173, 173);
+    border:solid rgb(187, 176, 176, 0.137) 3px;
+    background-color: rgb(227, 255, 231);
     font-size: 40px;
     align-self: center; 
 
@@ -22,30 +22,30 @@
     width:100px;
     height:100px;
     color:rgb(40, 71, 77);
-    background-color: rgb(221, 221, 221);
-    border: solid grey 2px;
-
-
+    background-color: rgb(227, 255, 250);
+    border: solid 1px lightblue;
+    border-bottom-left-radius: 12%;
+    border-bottom-right-radius: 12%;
 }
 
 .navbarButton:hover {
-    background-color: rgb(77, 77, 74);
+    background-color: rgb(78, 78, 78);
     color:white;
   }
 body{
-    background-color: rgba(190, 186, 186, 0.418);
+    background-color: rgb(253, 180, 180);
     align-items: center;
     border-radius: 2%;
 
 }
 #loginDiv{
-    background-color: rgb(129, 156, 158);
+    background-color:  rgb(138, 255, 210);
     height:98%;
     text-align: center;
     font-size: 30px;
     padding:10px;
     border-radius: 2%;
-    box-shadow: 4px 2px rgb(91, 108, 109);
+    box-shadow: 4px 2px rgb(196, 174, 153);
     
 }
 #submit{
@@ -57,26 +57,26 @@ body{
 }
 .informationBox{
     width: 35%;
-    background-color: rgb(196, 193, 193);
+    background-color: rgb(156, 235, 241, 0.479);
     padding:1%;
-    border:solid rgb(83, 83, 83);
+    border:solid rgba(255, 242, 227);
     float:left;
    
 
 }
 .biggerInfoBox{
     width: 59%;
-    background-color: rgb(196, 193, 193);
+    background-color: rgb(156, 235, 241, 0.479);
     padding:1%;
-    border:solid rgb(83, 83, 83);
+    border:solid  rgba(255, 242, 227);
     float: right;
 
 }
 #graphBox{
     width: 59%;
-    background-color: rgb(196, 193, 193);
+    background-color: rgba(156, 235, 241, 0.493);
     padding:1%;
-    border:solid rgb(83, 83, 83);
+    border:solid  rgba(255, 242, 227);
     float: right;
     
 
@@ -88,9 +88,9 @@ body{
 #blockOfText{
 
     width: 97%;
-    background-color: rgb(196, 193, 193);
+    background-color: rgba(156, 235, 241, 0.479);
     padding:1%;
-    border:solid rgb(83, 83, 83);
+    border:solid  rgba(255, 242, 227);
     float: center;
 
 }

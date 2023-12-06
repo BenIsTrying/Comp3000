@@ -4,6 +4,15 @@ $(function() {
 
     $("#sqlConnection").click(function SQL(){
         console.log("yeah this will connect to the database");
+
+        async function logSteps() {
+            
+            const response = await fetch("http://localhost:9000");
+            const steps = await response.json();
+            console.log(steps);
+        };
+    
+        logSteps();
         
     });
 
@@ -29,6 +38,8 @@ $(function() {
 $(function StepTable() {
 
     console.log("step table here");
+
+
 
     
 })
