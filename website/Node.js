@@ -1,18 +1,15 @@
 
 let http = require("http");
 let port = 9000;
+const express = require('express')
+const app = express()
+
 
 function sayHello() {
 return "Hello World from Node";
 }
 
-let server = http.createServer(function(request, response) {
-response.end(sayHello());
-});
 
-server.listen(port, function() {
-console.log("Server listening on port " + port);
-});
 
 var mysql = require('mysql');
 
@@ -31,12 +28,21 @@ con.connect(function(err) {
 
 con.connect(function(err) {
     if (err) throw err;
+    app.get("/", (req,res) => {
+      
+    
     con.query("SELECT * FROM Steps", function (err, result, fields) {
       if (err) throw err;
+      res.send(result)
       console.log(result);
     });
+  })
     con.query("SELECT * FROM Weight", function (err, result, fields) {
         if (err) throw err;
         console.log(result);
       });
 });
+
+app.listen(port,() => {
+  console.log(`Listening ${port}`)
+})
