@@ -22,10 +22,9 @@
     width:100px;
     height:100px;
     color:rgb(40, 71, 77);
-    background-color: rgb(227, 255, 250);
-    border: solid 1px lightblue;
-    border-bottom-left-radius: 12%;
-    border-bottom-right-radius: 12%;
+    background-color: rgba(227, 255, 250, 0.637);
+    border: solid 2px lightblue;
+    border-radius: 12%;
 }
 
 .navbarButton:hover {
@@ -33,13 +32,13 @@
     color:white;
   }
 body{
-    background-color: rgb(253, 180, 180);
+    background-color: rgba(253, 180, 180, 0.397);
     align-items: center;
     border-radius: 2%;
 
 }
 #loginDiv{
-    background-color:  rgb(138, 255, 210);
+    background-color:  rgba(138, 255, 210, 0.493);
     height:98%;
     text-align: center;
     font-size: 30px;
