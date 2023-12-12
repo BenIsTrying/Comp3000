@@ -2,11 +2,13 @@
 let http = require("http");
 let port = 9000;
 const express = require('express')
+let path = require("path");
 const app = express()
 
 
 
-
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 
 
