@@ -33,3 +33,7 @@ Possible issues:
 AI used on webpage (needs researching) 
 
 Connecting the android app to the webpages or databases 
+
+
+## Trello board:
+https://trello.com/b/QwkW9HE6/comp3000
