@@ -1,9 +1,8 @@
 #container{
 
     width:auto;
-    height: 1200px;
-    border:solid rgba(209, 133, 133, 0.137);
-    background-color: rgba(255, 242, 227);
+    height: 1200px;;
+    background-color:rgb(218, 255, 215);
     padding:10px;
     
 }
@@ -11,71 +10,70 @@
 
     width:auto;
     height: 47px;
-    border:solid rgb(187, 176, 176, 0.137) 3px;
-    background-color: rgb(227, 255, 231);
+    padding:10px;
+    background-color: rgb(39, 141, 35);
     font-size: 40px;
-    align-self: center; 
-
+    align-items: right;
+}
+#rightAlign{
+    float:right;
 }
 .navbarButton{
-
+    
     width:100px;
     height:100px;
     color:rgb(40, 71, 77);
-    background-color: rgba(227, 255, 250, 0.637);
-    border: solid 2px lightblue;
-    border-radius: 12%;
+    background-color: rgba(187, 255, 170, 0.863);
+    border: solid 2px rgba(187, 255, 170, 0.863);
 }
 
 .navbarButton:hover {
-    background-color: rgb(78, 78, 78);
+    background-color:rgba(30, 65, 20, 0.863);
     color:white;
   }
 body{
-    background-color: rgba(253, 180, 180, 0.397);
+    background-color: rgba(96, 255, 136, 0.863);
     align-items: center;
     border-radius: 2%;
 
 }
 #loginDiv{
-    background-color:  rgba(138, 255, 210, 0.493);
+    background-color:  rgba(152, 255, 149, 0.863);
     height:98%;
     text-align: center;
     font-size: 30px;
     padding:10px;
     border-radius: 2%;
-    box-shadow: 4px 2px rgb(196, 174, 153);
     
 }
 #submit{
     font-size: 60px;
 }
 .textBox{
-    background-color: lightblue;
+    background-color: rgb(197, 255, 174);
     font-size: 30px;
 }
 .informationBox{
     width: 35%;
-    background-color: rgb(156, 235, 241, 0.479);
+    background-color: rgb(140, 209, 134);
     padding:1%;
-    border:solid rgba(255, 242, 227);
     float:left;
-   
+    border:solid  rgba(218, 255, 215);
 
 }
 .biggerInfoBox{
     width: 59%;
-    background-color: rgb(156, 235, 241, 0.479);
+    background-color: rgba(148, 204, 173, 0.863);
     padding:1%;
-    border:solid  rgba(255, 242, 227);
     float: right;
+    border:solid  rgba(218, 255, 215);
 
 }
 #graphBox{
     width: 59%;
-    background-color: rgba(156, 235, 241, 0.493);
+    background-color: rgba(165, 255, 165, 0.863);
     padding:1%;
-    border:solid  rgba(255, 242, 227);
+    border:solid  rgba(218, 255, 215);
     float: right;
     
 
@@ -87,9 +85,8 @@ body{
 #blockOfText{
 
     width: 97%;
-    background-color: rgba(156, 235, 241, 0.479);
+    background-color:rgb(131, 212, 158);
     padding:1%;
-    border:solid  rgba(255, 242, 227);
     float: center;
 
 }
