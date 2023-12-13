@@ -61,13 +61,13 @@ $(function() {
                 labels: xValues,//shows x axis labels 
                 datasets: [{
                 backgroundColor:"rgba(173,10,173,1.0)",
-                borderColor: "rgba(173,10,173,0.7)",
+                borderColor: "rgba(173,30,173,1)",
                 fill: false,
                 data: yValues//uses data to plot y axis 
                 },{
                     data: SValues,
-                    backgroundColor:"rgba(10,173,173,1.0)",
-                    borderColor: "rgba(10,173,173,0.4)",
+                    backgroundColor:"rgba(10,200,173,1.0)",
+                    borderColor: "rgba(10,0,173,1)",
                     fill: false
                 }]
             },
