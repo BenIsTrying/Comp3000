@@ -1,16 +1,8 @@
-
 let http = require("http");
 let port = 9000;
-const express = require('express')
-let path = require("path");
-const app = express()
 
 
-
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
-
-
+var express= require('express');
 
 var mysql = require('mysql');
 
@@ -20,37 +12,77 @@ var con = mysql.createConnection({
     password: "ZgdF769+",
     database: "COMP3000_BGeorge"
 });
-/*
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-});
-*/
+
+// con.connect(function(err) {
+//     if (err) throw err;
+//     console.log("Connected!");
+// });
+
+let weightData;
+let stepData;
 
 con.connect(function(err) {
     if (err) throw err;
-    app.get("/", (req,res) => {
-      
-    
-    con.query("SELECT * FROM Steps, Weight", function (err, result, fields) {
+    con.query("SELECT * FROM Steps", function (err, result, fields) {
       if (err) throw err;
-      res.send(result);
-
-      //console.log(result);
+      stepData = result;
+      console.log(result);
     });
-  
-    /*
-    con.query("SELECT * FROM Weight", function (err, resultW, fields) {
+    con.query("SELECT * FROM Weight", function (err, result, fields) {
         if (err) throw err;
-        
-        //console.log(result);
-        res.send(resultW);
-
+        weightData = result;
+        console.log(result);
       });
-      */
-    })
 });
 
-app.listen(port,() => {
-  console.log(`Listening ${port}`)
+
+var server = express();
+
+function sayHello() {
+    return "hello";
+}
+
+let app = http.createServer(server);
+
+server.use(express.static('public'));
+
+server.get('/', (request, response) => {
+    response.sendFile(__dirname + "/pages/Index.html");
 })
+server.get('/health', (request, response) => {
+    response.sendFile(__dirname + "/pages/Health.html");
+})
+server.get('/main', (request, response) => {
+  response.sendFile(__dirname + "/pages/Main.html");
+})
+server.get('/about', (request, response) => {
+  response.sendFile(__dirname + "/pages/About.html");
+})
+// server.get('/style', (request, response) => {
+//   response.sendFile(__dirname + "/pages/StyleSheet.css");
+// })
+// server.get('/js', (request, response) => {
+//   response.sendFile(__dirname + "/pages/javascript.js");
+// })
+
+
+server.listen(port, function() {
+    console.log("Server listening on port " + port);
+
+});
+
+
+
+server.get('/steps', (request, response) => {
+    console.log(stepData);
+    response.json(stepData);
+})
+server.get('/weight', (request, response) => {
+    response.json(weightData);
+})
+
+
+
+
+
+

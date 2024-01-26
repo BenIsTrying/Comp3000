@@ -29,6 +29,15 @@ $(function() {
             alert("Incorrect, please enter you details again");
         };
     });
+
+    function getUserData(){
+                
+        //user data
+        fetch('http://localhost:9000/steps')
+        .then(res => res.json())
+        .then(data => useUserData(data));
+    };
+
     
         
     $(function Graph() {
