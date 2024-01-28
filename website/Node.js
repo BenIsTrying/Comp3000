@@ -47,16 +47,16 @@ let app = http.createServer(server);
 server.use(express.static('public'));
 
 server.get('/', (request, response) => {
-    response.sendFile(__dirname + "/pages/Index.html");
+    response.sendFile(__dirname + "/public/Index.html");
 })
 server.get('/health', (request, response) => {
-    response.sendFile(__dirname + "/pages/Health.html");
+    response.sendFile(__dirname + "/public/Health.html");
 })
 server.get('/main', (request, response) => {
-  response.sendFile(__dirname + "/pages/Main.html");
+  response.sendFile(__dirname + "/public/Main.html");
 })
 server.get('/about', (request, response) => {
-  response.sendFile(__dirname + "/pages/About.html");
+  response.sendFile(__dirname + "/public/About.html");
 })
 // server.get('/style', (request, response) => {
 //   response.sendFile(__dirname + "/pages/StyleSheet.css");
