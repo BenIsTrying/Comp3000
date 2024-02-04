@@ -1,5 +1,4 @@
 
-
 $(function() {
 
     $("#sqlConnection").click(function SQL(){
@@ -30,15 +29,26 @@ $(function() {
         };
     });
 
-    function getUserData(){
+
+
+    
+    function useUserData(data){
+
+        console.log(data[0].Step_Day_01);
+
+    };
+
+    $("#showData").click(function getUserData(){
+
+
                 
         //user data
         fetch('http://localhost:9000/steps')
         .then(res => res.json())
         .then(data => useUserData(data));
-    };
 
-    
+    });
+
         
     $(function Graph() {
 

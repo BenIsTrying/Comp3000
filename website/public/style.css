@@ -84,9 +84,9 @@ body{
 }
 #blockOfText{
 
-    width: 97%;
+    width: 98%;
     background-color:rgb(131, 212, 158);
     padding:1%;
-    float: center;
+    float: left;
 
 }
