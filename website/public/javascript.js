@@ -76,12 +76,20 @@ $(function() {
 
     
 
+    function AIData(WeightData, StepData) {
+
+        console.log(WeightData, StepData);
+
+    };
+
+    
+
         function Graph(data, stepData) {
 
 
 
         //let S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31;
-        let W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31;
+        //let W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31;
 
         // S1 = stepData[0].Step_Day_01, S6 = stepData[0].Step_Day_06, S11 = stepData[0].Step_Day_11;
         // S2 = stepData[0].Step_Day_02, S7 = stepData[0].Step_Day_07, S12 = stepData[0].Step_Day_12;
@@ -136,30 +144,21 @@ $(function() {
                 }]
             },
             options: {
-                legend: {display: false},
+                legend: {display: true,
+                    labels: {
+                        
+                    }},
                 scales: {
                     xAxes: [{ticks: {min: 0, max:31}}],
                     yAxes: [{ticks: {min: 0, max:20000}}],
+                    
                 }
             }
         });
 
 
+        //need to connect to next function to display data again
+        AIData(data, stepData);//the data will be sorted into a more standerd naming convention when used in next function
+
     };
     
-
-$(function StepTable() {
-
-    console.log("step table here");
-
-
-
-    
-})
-
-
-$(function AIData() {
-
-
-
-});
