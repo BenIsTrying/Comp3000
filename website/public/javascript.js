@@ -155,6 +155,7 @@ $(function() {
                 }
             }
         });
+        
 
 
         //need to connect to next function to display data again

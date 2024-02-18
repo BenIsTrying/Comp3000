@@ -13,10 +13,10 @@
 
 </head>
 
-<body >
+<body  onload="getDataForGraph()">
 
 
-<div id="navbar">
+<div id="navbar" >
 
     <div id="rightAlign">
         <a class="navbarButton"> Home page</a>
@@ -30,22 +30,50 @@
 <div id="container">
 
     <div class="informationBox">
-        <h2>Comp 3000 project</h2>
+        
+        show positive or negitive trend in data
 
-        <p>This website is a health system constining of:
-            <li>HTML pages</li>
-            <li>CSS stylesheet</li>
-            <li>JS javascript code</li>
-            <li>Android studio application</li>
-            <li>DataBase for storing user health data</li>
-        </p>
     </div>
 
     <div class="biggerInfoBox">
-        <h2>Android application</h2>
-        <p>This health monitoring system will connect and store all data on the database
-        </p>
+
+        small graph here
+
+        <canvas id="Chart" style="width:90%;height:270px;"></canvas>
+
     </div>
+
+    <div class="imageBox">
+
+        <img src="/images/watchReferenceImage.png" alt="android watch image" width="100%" height="340px;">
+        
+    </div>
+
+    <div class="biggerInfoBox">
+        <p><h1>How to use android app</h1>
+        
+        <li>
+            Downlaod the app and run it on a compatable android watch (anything running the current version of wearOS)
+
+            link to github page for android watch application 
+        </li>
+        <br>
+        <li>
+            Open the app on the watch and do not close it.
+        </li>
+        <br>
+        <li>
+            Done! the app will now work automaticly as long as the applicatiion is not closed.
+        </li>
+        <br>
+        </p>
+        
+    </div>
+
+</div>
+<div id="footer" >
+
+
 
 </div>
 </body>
