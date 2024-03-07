@@ -13,6 +13,109 @@
 
 </head>
 
+<script>
+
+
+    function getDataForGraph(){
+            getUserData();
+        }
+        function getUserWeight(stepData){
+           
+            //user data
+            fetch('http://localhost:9000/weight')
+            .then(res => res.json())
+            .then(data => collectAllData(data, stepData));
+    
+        };
+    
+        function collectAllData( data, stepData){
+    
+            console.log(data[0].Weight_Day_01);
+            console.log(stepData[0].Step_Day_01);
+    
+            Graph(data, stepData);
+    
+        };
+    
+        function useUserData(data){
+    
+            console.log(data[0].Step_Day_01);
+            getUserWeight(data);
+    
+        };
+    
+        function getUserData(){
+    
+    
+                    
+            //user data
+            fetch('http://localhost:9000/steps')
+            .then(res => res.json())
+            .then(data => useUserData(data));
+    
+        };
+    
+            function Graph(data, stepData) {
+    
+    
+            const xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];//sample data
+            const SValues = [data[0].Weight_Day_01,data[0].Weight_Day_02,data[0].Weight_Day_03,data[0].Weight_Day_04,data[0].Weight_Day_05,
+                            data[0].Weight_Day_06, data[0].Weight_Day_07, data[0].Weight_Day_08, data[0].Weight_Day_09, data[0].Weight_Day_10,
+                            data[0].Weight_Day_11, data[0].Weight_Day_12, data[0].Weight_Day_13, data[0].Weight_Day_14, data[0].Weight_Day_15,
+                            data[0].Weight_Day_16, data[0].Weight_Day_17, data[0].Weight_Day_18, data[0].Weight_Day_19, data[0].Weight_Day_20,
+                            data[0].Weight_Day_21, data[0].Weight_Day_22, data[0].Weight_Day_23, data[0].Weight_Day_24, data[0].Weight_Day_25,
+                            data[0].Weight_Day_26, data[0].Weight_Day_27, data[0].Weight_Day_28, data[0].Weight_Day_29, data[0].Weight_Day_30,
+                            data[0].Weight_Day_31];
+    
+            const yValues = [stepData[0].Step_Day_01,stepData[0].Step_Day_02,stepData[0].Step_Day_03, stepData[0].Step_Day_04, stepData[0].Step_Day_05,
+                            stepData[0].Step_Day_06, stepData[0].Step_Day_07, stepData[0].Step_Day_08, stepData[0].Step_Day_09, stepData[0].Step_Day_10,
+                            stepData[0].Step_Day_11, stepData[0].Step_Day_12, stepData[0].Step_Day_13, stepData[0].Step_Day_14, stepData[0].Step_Day_15,
+                            stepData[0].Step_Day_16, stepData[0].Step_Day_17, stepData[0].Step_Day_18, stepData[0].Step_Day_19, stepData[0].Step_Day_20,
+                            stepData[0].Step_Day_21, stepData[0].Step_Day_22, stepData[0].Step_Day_23, stepData[0].Step_Day_24, stepData[0].Step_Day_25,
+                            stepData[0].Step_Day_26, stepData[0].Step_Day_27, stepData[0].Step_Day_28, stepData[0].Step_Day_29, stepData[0].Step_Day_30,
+                            stepData[0].Step_Day_31];//steps
+    
+    
+            new Chart("smallChart", {
+                type: "line",
+                data: {
+                    labels: xValues,//shows x axis labels 
+                    datasets: [{
+                    backgroundColor:"rgba(173,10,173,1.0)",
+                    borderColor: "rgba(173,30,173,1)",
+                    fill: false,
+                    data: yValues//uses data to plot y axis 
+                    },{
+                        data: SValues,
+                        backgroundColor:"rgba(10,200,173,1.0)",
+                        borderColor: "rgba(10,0,173,1)",
+                        fill: false
+                    }]
+                },
+                options: {
+                    legend: {display: true,
+                        labels: {
+                            
+                        }},
+                    scales: {
+                        xAxes: [{ticks: {min: 0, max:31}}],
+                        yAxes: [{ticks: {min: 0, max:20000}}],
+                        
+                    }
+                }
+            });
+            
+    
+    
+            //need to connect to next function to display data again
+           // AIData(data, stepData);//the data will be sorted into a more standerd naming convention when used in next function
+    
+        };
+        
+    
+    
+    </script>
+
 <body  onload="getDataForGraph()">
 
 
@@ -71,7 +174,7 @@
     </div>
 
 </div>
-<div id="footer" >
+<div id="footer">
 
 
 
