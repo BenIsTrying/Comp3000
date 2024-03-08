@@ -116,7 +116,7 @@ function getDataForGraph(){
 
 </script>
 
-<body onload="getDataForGraph()">
+<body onload="getDataForGraph(), setUp()" >
 
 
     <div id="navbar">
@@ -143,7 +143,9 @@ function getDataForGraph(){
     <br><br>
 
     <div id="graphBox">
-        
+
+        <p><h1 id="title">Last week</h1></p>
+        <canvas id="miniChart" style="width:95%;height:280px;"></canvas>
 
     </div>
 
