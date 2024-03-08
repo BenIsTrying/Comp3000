@@ -118,26 +118,43 @@ function step1(){
 
         const xValues = [day1,day2,day3,day4,day5,day6,day7];//sample data
 
+        S1 = stepData[0].Step_Day_01, S6 = stepData[0].Step_Day_06, S11 = stepData[0].Step_Day_11;
+        S2 = stepData[0].Step_Day_02, S7 = stepData[0].Step_Day_07, S12 = stepData[0].Step_Day_12;
+        S3 = stepData[0].Step_Day_03, S8 = stepData[0].Step_Day_08, S13 = stepData[0].Step_Day_13;
+        S4 = stepData[0].Step_Day_04, S9 = stepData[0].Step_Day_09, S14 = stepData[0].Step_Day_14;
+        S5 = stepData[0].Step_Day_05, S10 = stepData[0].Step_Day_10, S15 = stepData[0].Step_Day_15;
+
+        S16 = stepData[0].Step_Day_16, S21 = stepData[0].Step_Day_21, S26 = stepData[0].Step_Day_26;
+        S17 = stepData[0].Step_Day_17, S22 = stepData[0].Step_Day_22, S27 = stepData[0].Step_Day_27;
+        S18 = stepData[0].Step_Day_18, S23 = stepData[0].Step_Day_23, S28 = stepData[0].Step_Day_28;
+        S19 = stepData[0].Step_Day_19, S24 = stepData[0].Step_Day_24, S29 = stepData[0].Step_Day_29;
+        S20 = stepData[0].Step_Day_20, S25 = stepData[0].Step_Day_25, S30 = stepData[0].Step_Day_30;
+        S31 = stepData[0].Step_Day_31;
+
+        W1 = data[0].Weight_Day_01, W6 = data[0].Weight_Day_06, W11 = data[0].Weight_Day_11;
+        W2 = data[0].Weight_Day_02, W7 = data[0].Weight_Day_07, W12 = data[0].Weight_Day_12;
+        W3 = data[0].Weight_Day_03, W8 = data[0].Weight_Day_08, W13 = data[0].Weight_Day_13;
+        W4 = data[0].Weight_Day_04, W9 = data[0].Weight_Day_09, W14 = data[0].Weight_Day_14;
+        W5 = data[0].Weight_Day_05, W10 = data[0].Weight_Day_10, W15 = data[0].Weight_Day_15;
+
+        W16 = data[0].Weight_Day_16, W21 = data[0].Weight_Day_21, W26 = data[0].Weight_Day_26;
+        W17 = data[0].Weight_Day_17, W22 = data[0].Weight_Day_22, W27 = data[0].Weight_Day_27;
+        W18 = data[0].Weight_Day_18, W23 = data[0].Weight_Day_23, W28 = data[0].Weight_Day_28;
+        W19 = data[0].Weight_Day_19, W24 = data[0].Weight_Day_24, W29 = data[0].Weight_Day_29;
+        W20 = data[0].Weight_Day_20, W25 = data[0].Weight_Day_25, W30 = data[0].Weight_Day_30;
+        W31 = data[0].Weight_Day_31;
 
 
-        
+
+        const weight = {W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31};
+        const step = {S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31};
+        console.log(weight[1]);//comes up aas undefined must do something like .value()
+        console.log(W1);
 
     
-    const SValues = [data[0].Weight_Day_01,data[0].Weight_Day_02,data[0].Weight_Day_03,data[0].Weight_Day_04,data[0].Weight_Day_05,
-                    data[0].Weight_Day_06, data[0].Weight_Day_07, data[0].Weight_Day_08, data[0].Weight_Day_09, data[0].Weight_Day_10,
-                    data[0].Weight_Day_11, data[0].Weight_Day_12, data[0].Weight_Day_13, data[0].Weight_Day_14, data[0].Weight_Day_15,
-                    data[0].Weight_Day_16, data[0].Weight_Day_17, data[0].Weight_Day_18, data[0].Weight_Day_19, data[0].Weight_Day_20,
-                    data[0].Weight_Day_21, data[0].Weight_Day_22, data[0].Weight_Day_23, data[0].Weight_Day_24, data[0].Weight_Day_25,
-                    data[0].Weight_Day_26, data[0].Weight_Day_27, data[0].Weight_Day_28, data[0].Weight_Day_29, data[0].Weight_Day_30,
-                    data[0].Weight_Day_31];
+    const SValues = [weight[day1],weight[day2],weight[day3],weight[day4],weight[day5],weight[day6], weight[day7]];
 
-    const yValues = [stepData[0].Step_Day_01,stepData[0].Step_Day_02,stepData[0].Step_Day_03, stepData[0].Step_Day_04, stepData[0].Step_Day_05,
-                    stepData[0].Step_Day_06, stepData[0].Step_Day_07, stepData[0].Step_Day_08, stepData[0].Step_Day_09, stepData[0].Step_Day_10,
-                    stepData[0].Step_Day_11, stepData[0].Step_Day_12, stepData[0].Step_Day_13, stepData[0].Step_Day_14, stepData[0].Step_Day_15,
-                    stepData[0].Step_Day_16, stepData[0].Step_Day_17, stepData[0].Step_Day_18, stepData[0].Step_Day_19, stepData[0].Step_Day_20,
-                    stepData[0].Step_Day_21, stepData[0].Step_Day_22, stepData[0].Step_Day_23, stepData[0].Step_Day_24, stepData[0].Step_Day_25,
-                    stepData[0].Step_Day_26, stepData[0].Step_Day_27, stepData[0].Step_Day_28, stepData[0].Step_Day_29, stepData[0].Step_Day_30,
-                    stepData[0].Step_Day_31];//steps
+    const yValues = [step[day1],step[day2],step[day3],step[day4],step[day5],step[day6],step[day7]];//steps
 
 
     const healthChart = new Chart("miniChart", {
