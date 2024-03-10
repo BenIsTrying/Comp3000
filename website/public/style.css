@@ -83,7 +83,7 @@ body{
 }
 .tallInformationBox{
     width: 35%;
-    min-height: 750px;
+    min-height: 400px;
     background-color: rgb(181, 255, 244);
     padding:1%;
     float:left;
