@@ -1,6 +1,10 @@
 
+
+
 $(function() {
 
+
+    
     // $("#sqlConnection").click(function SQL(){
     //     console.log("yeah this will connect to the database");
 
@@ -83,6 +87,8 @@ function step1(){
         console.log(day);
 
 
+        //day =1;
+
         day7=day;
         day6=day-1;
         day5=day-2;
@@ -146,15 +152,28 @@ function step1(){
 
 
 
-        const weight = {W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31};
-        const step = {S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31};
-        console.log(weight[1]);//comes up aas undefined must do something like .value()
-        console.log(W1);
+        const weight = [W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31];
+        const step = [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31];
+        console.log(weight[16-1]);//comes up aas undefined must do something like .value()
+        console.log(W16);
+        console.log("16 - ",data[0].Weight_Day_16);
 
+        console.log(Math.max(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]), " ", Math.max(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]));
+
+        const topStepWeek = Math.max(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]);
+        const topWeightWeek = Math.max(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]);
+
+        const topStep = Math.max(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31);
+        const topWeight = Math.max(W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31);
+
+
+        console.log(topStep,topStepWeek,topWeight,topWeightWeek);
+
+        const smallGraphHeight = Math.max(topStepWeek,topWeightWeek);//used to scale graph to show all data
     
-    const SValues = [weight[day1],weight[day2],weight[day3],weight[day4],weight[day5],weight[day6], weight[day7]];
+    const SValues = [weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]];
 
-    const yValues = [step[day1],step[day2],step[day3],step[day4],step[day5],step[day6],step[day7]];//steps
+    const yValues = [step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]];//steps
 
 
     const healthChart = new Chart("miniChart", {
@@ -176,10 +195,11 @@ function step1(){
         options: {
             legend: {display: true,
                 labels: {
+                     
                     
                 }},
             scales: {
-                yAxes: [{ticks: {min: 0, max:20000}}],
+                yAxes: [{ticks: {min: 0, max:smallGraphHeight}}],
                 
             }
         }

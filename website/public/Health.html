@@ -75,6 +75,25 @@ function getDataForGraph(){
                         stepData[0].Step_Day_26, stepData[0].Step_Day_27, stepData[0].Step_Day_28, stepData[0].Step_Day_29, stepData[0].Step_Day_30,
                         stepData[0].Step_Day_31];//steps
 
+        const topStep = Math.max(stepData[0].Step_Day_01,stepData[0].Step_Day_02,stepData[0].Step_Day_03, stepData[0].Step_Day_04, stepData[0].Step_Day_05,
+                        stepData[0].Step_Day_06, stepData[0].Step_Day_07, stepData[0].Step_Day_08, stepData[0].Step_Day_09, stepData[0].Step_Day_10,
+                        stepData[0].Step_Day_11, stepData[0].Step_Day_12, stepData[0].Step_Day_13, stepData[0].Step_Day_14, stepData[0].Step_Day_15,
+                        stepData[0].Step_Day_16, stepData[0].Step_Day_17, stepData[0].Step_Day_18, stepData[0].Step_Day_19, stepData[0].Step_Day_20,
+                        stepData[0].Step_Day_21, stepData[0].Step_Day_22, stepData[0].Step_Day_23, stepData[0].Step_Day_24, stepData[0].Step_Day_25,
+                        stepData[0].Step_Day_26, stepData[0].Step_Day_27, stepData[0].Step_Day_28, stepData[0].Step_Day_29, stepData[0].Step_Day_30,
+                        stepData[0].Step_Day_31);
+        const topWeight = Math.max(data[0].Weight_Day_01,data[0].Weight_Day_02,data[0].Weight_Day_03,data[0].Weight_Day_04,data[0].Weight_Day_05,
+                        data[0].Weight_Day_06, data[0].Weight_Day_07, data[0].Weight_Day_08, data[0].Weight_Day_09, data[0].Weight_Day_10,
+                        data[0].Weight_Day_11, data[0].Weight_Day_12, data[0].Weight_Day_13, data[0].Weight_Day_14, data[0].Weight_Day_15,
+                        data[0].Weight_Day_16, data[0].Weight_Day_17, data[0].Weight_Day_18, data[0].Weight_Day_19, data[0].Weight_Day_20,
+                        data[0].Weight_Day_21, data[0].Weight_Day_22, data[0].Weight_Day_23, data[0].Weight_Day_24, data[0].Weight_Day_25,
+                        data[0].Weight_Day_26, data[0].Weight_Day_27, data[0].Weight_Day_28, data[0].Weight_Day_29, data[0].Weight_Day_30,
+                        data[0].Weight_Day_31);
+
+        console.log(topWeight,topStep);
+
+        const graphScale = Math.max(topWeight,topStep);
+
 
         const healthChart = new Chart("Chart", {
             type: "line",
@@ -99,7 +118,7 @@ function getDataForGraph(){
                     }},
                 scales: {
                     xAxes: [{ticks: {min: 0, max:31}}],
-                    yAxes: [{ticks: {min: 0, max:20000}}],
+                    yAxes: [{ticks: {min: 0, max:graphScale}}],
                     
                 }
             }
@@ -151,7 +170,7 @@ function getDataForGraph(){
 
     <div class="informationBox">
 
-      
+        <p><h1 id="title">Best steps this month</h1></p>
         
     </div>
 
