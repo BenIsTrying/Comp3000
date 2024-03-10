@@ -81,6 +81,17 @@ body{
     border-radius: 10px;
 
 }
+.tallInformationBox{
+    width: 35%;
+    min-height: 750px;
+    background-color: rgb(181, 255, 244);
+    padding:1%;
+    float:left;
+    border:solid  rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 15px;
+
+}
 .imageBox{
     width: 37%;
     height: 350px;
@@ -108,8 +119,11 @@ body{
     border-radius: 10px;
 
 }
-#title{
+.title{
     text-decoration: underline;
+    text-align: center;
+}
+.score{
     text-align: center;
 }
 #blockOfText{
@@ -120,3 +134,25 @@ body{
     float: left;
     border-radius: 10px;
 }
+#hide{
+    visibility: hidden;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  
+  td, th {
+    border: 1px solid #abddff;
+    text-align: left;
+    padding: 8px;
+
+  }
+  
+  tr:nth-child(even) {
+    background-color: #abddff;
+  }
+

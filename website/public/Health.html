@@ -155,7 +155,7 @@ function getDataForGraph(){
 
     <div id="blockOFText">
 
-        <p><h1 id="title">Last month</h1></p>
+        <p><h1 class="title">Last month</h1></p>
         <canvas id="Chart" style="width:95%;height:300px;"></canvas>
     </div>
 
@@ -163,14 +163,40 @@ function getDataForGraph(){
 
     <div id="graphBox">
 
-        <p><h1 id="title">Last week</h1></p>
+        <p><h1 class="title">Last week</h1></p>
         <canvas id="miniChart" style="width:95%;height:280px;"></canvas>
 
     </div>
 
-    <div class="informationBox">
+    <div class="tallInformationBox">
 
-        <p><h1 id="title">Best steps this month</h1></p>
+        <p>
+        <table>
+        <tr>
+            <th>Top Score</th>
+            <th>Scores:</th>
+        </tr>
+        <tr>
+            <td>Highest Steps this month</td>
+            <td id="tStep">Placeholder</td>
+        </tr>
+        <tr>
+            <td>Highest Weight this month</td>
+            <td id="tWeight">Placeholder</td>
+        </tr>
+        <tr>
+            <td>Highest Steps this week</td>
+            <td id="tWeekStep">Placeholder</td>
+        </tr>
+        <tr>
+            <td>Highest Weight this week</td>
+            <td id="tWeekWeight">Placeholder</td>
+        </tr>
+        </table>
+        </p>
+
+
+
         
     </div>
 

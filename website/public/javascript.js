@@ -175,6 +175,7 @@ function step1(){
 
     const yValues = [step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]];//steps
 
+    
 
     const healthChart = new Chart("miniChart", {
         type: "line",
@@ -203,8 +204,18 @@ function step1(){
                 
             }
         }
+
+
+        
+        
+
+
+
     });
-    
+    document.getElementById("tStep").innerHTML = topStep + " - Steps";
+    document.getElementById("tWeight").innerHTML = topWeight/100 + "KG";
+    document.getElementById("tWeekWeight").innerHTML = topWeightWeek/100 + "KG";
+    document.getElementById("tWeekStep").innerHTML = topStepWeek + " - Steps";
 
 
     //need to connect to next function to display data again
