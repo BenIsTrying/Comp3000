@@ -160,6 +160,7 @@ function step1(){
 
         console.log(Math.max(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]), " ", Math.max(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]));
 
+        //use max() to find highest number
         const topStepWeek = Math.max(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]);
         const topWeightWeek = Math.max(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]);
 
@@ -217,19 +218,25 @@ function step1(){
     document.getElementById("tWeekWeight").innerHTML = topWeightWeek/100 + "KG";
     document.getElementById("tWeekStep").innerHTML = topStepWeek + " - Steps";
 
+    //use math min() to get smallest number
+
+    const lowStepWeek = Math.min(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]);
+    const lowWeightWeek = Math.min(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]);
+
+    const lowStep = Math.min(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31);
+    const lowWeight = Math.min(W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31);
+
+
+    document.getElementById("lStep").innerHTML = lowStep + " - Steps";
+    document.getElementById("lWeight").innerHTML = lowWeight/100 + "KG";
+    document.getElementById("lWeekWeight").innerHTML = lowWeightWeek/100 + "KG";
+    document.getElementById("lWeekStep").innerHTML = lowStepWeek + " - Steps";
+
 
     //need to connect to next function to display data again
    // AIData(data, stepData);//the data will be sorted into a more standerd naming convention when used in next function
 
 
-
-
-
-   function dataTrend(){
-        //order tyhe weeks/months data from largest to smallest and show the range change in eithe rpositive or negative
-
-
-   }
 
 };
 
