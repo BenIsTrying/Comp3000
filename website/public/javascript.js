@@ -236,7 +236,20 @@ function step1(){
     //need to connect to next function to display data again
    // AIData(data, stepData);//the data will be sorted into a more standerd naming convention when used in next function
 
+    const avgStepMonth = Math.mean(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31);
+    const avgWeightMonth = Math.mean(W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31);
+    const avgStepWeek = Math.mean(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]);
+    const avgWegihtWeek = Math.mean(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]);
 
+   checkMetGoal(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek);
 
 };
 
+function checkMetGoal(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek){
+
+    console.log(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek);//gotta work on this soon
+
+
+
+
+}
