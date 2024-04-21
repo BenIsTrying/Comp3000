@@ -227,6 +227,23 @@ function step1(){
 
 
     });
+    
+    const stepsGoalReached = data[0].StepTarget;
+    const weightGoalReached = data[0].WeightTarget;
+    console.log("step goal here -> " , stepsGoalReached, weightGoalReached);
+    
+    let progressWidth = (  step[day7-1]/stepsGoalReached )*100;
+    console.log(" progress here -> ",progressWidth, step[day7-1]);
+    if (progressWidth > 100){
+        progressWidth = 99.9;
+        document.getElementById("goalProgress").innerHTML = "100%";
+    }
+    else{
+        document.getElementById("goalProgress").innerHTML = progressWidth+"%";
+    }
+    document.getElementById("greenBar").style.width = progressWidth+ "%";
+
+
     document.getElementById("tStep").innerHTML = topStep + " - Steps";
     document.getElementById("tWeight").innerHTML = topWeight/100 + "KG";
     document.getElementById("tWeekWeight").innerHTML = topWeightWeek/100 + "KG";
@@ -240,9 +257,11 @@ function step1(){
     const lowStep = Math.min(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31);
     const lowWeight = Math.min(W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31);
 
-    const stepsGoalReached = data[0].StepTarget;
-    const weightGoalReached = data[0].WeightTarget;
-    console.log(stepsGoalReached, weightGoalReached);
+    
+
+    
+
+    console.log(progressWidth);
 
     if (step[day1-1] >= stepsGoalReached){
         document.getElementById("stepsMet").innerHTML = "Goal reached!";

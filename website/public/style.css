@@ -121,6 +121,21 @@ body{
     
 
 }
+.progressBar{
+
+    width: 98%;
+    height: 200px;
+    background-color: rgba(170, 251, 255, 0.863);
+    padding:1%;
+    border:solid  rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+#greenBarHolder{
+
+    border:solid  rgb(123, 169, 255);
+    border-radius: 10px;
+}
 #targetBox{
     width: 98%;
     background-color: rgba(170, 251, 255, 0.863);
