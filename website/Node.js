@@ -13,10 +13,6 @@ var con = mysql.createConnection({
     database: "COMP3000_BGeorge"
 });
 
-// con.connect(function(err) {
-//     if (err) throw err;
-//     console.log("Connected!");
-// });
 
 let weightData;
 let stepData;

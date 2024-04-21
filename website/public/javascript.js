@@ -70,9 +70,7 @@ function step2(data){
 };
 
 function step1(){
-
-
-            
+    
     //user data
     fetch('http://localhost:9000/steps')
     .then(res => res.json())
