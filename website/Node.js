@@ -33,6 +33,11 @@ con.connect(function(err) {
         weightData = result;
         console.log(result);
       });
+    con.query("SELECT * FROM target", function (err, result, fields) {
+        if (err) throw err;
+        targetData = result;
+        console.log(result);
+    });
 });
 
 
@@ -80,7 +85,9 @@ server.get('/steps', (request, response) => {
 server.get('/weight', (request, response) => {
     response.json(weightData);
 })
-
+server.get('/target', (request, response) => {
+    response.json(targetData);
+})
 
 
 
