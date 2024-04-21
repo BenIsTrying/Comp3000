@@ -263,11 +263,11 @@ function step1(){
 
     console.log(progressWidth);
 
-    if (step[day1-1] >= stepsGoalReached){
+    if (step[day7-1] >= stepsGoalReached){
         document.getElementById("stepsMet").innerHTML = "Goal reached!";
         document.getElementById("stepsMet").style.backgroundColor = "lightgreen";
     }
-    if (weight[day1-1] >= weightGoalReached){
+    if (weight[day7-1] <= weightGoalReached){
         document.getElementById("weightMet").innerHTML = "Goal reached!";
         document.getElementById("weightMet").style.backgroundColor = "lightgreen";
     }
