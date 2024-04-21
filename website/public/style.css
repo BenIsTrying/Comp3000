@@ -1,7 +1,7 @@
 #container{
 
     width:auto;
-    height: 1200px;
+    height: 1100px;
     background-color:rgb(255, 255, 255);
     padding:10px;
     font-family: Arial;
@@ -117,8 +117,45 @@ body{
     border:solid  rgb(255, 255, 255);
     float: right;
     border-radius: 10px;
+    height:400px;
+    
 
 }
+#targetBox{
+    width: 98%;
+    background-color: rgba(170, 251, 255, 0.863);
+    padding:1%;
+    border:solid  rgb(255, 255, 255);
+    float: right;
+    border-radius: 10px;
+    
+
+}
+#stepsMet{
+
+    width: 45%;
+    background-color: rgba(255, 58, 51, 0.863);
+    padding:1%;
+    border:solid  rgba(255, 255, 255, 0);
+    float: left;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+#weightMet{
+
+    width: 45%;
+    background-color: rgba(255, 58, 51, 0.863);
+    padding:1%;
+    border:solid  rgba(255, 255, 255, 0);
+    float: right;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
 .title{
     text-decoration: underline;
     text-align: center;

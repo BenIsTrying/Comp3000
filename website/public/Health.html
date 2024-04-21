@@ -100,11 +100,13 @@ function getDataForGraph(){
             data: {
                 labels: xValues,//shows x axis labels 
                 datasets: [{
-                backgroundColor:"rgba(173,10,173,1.0)",
-                borderColor: "rgba(173,30,173,1)",
-                fill: false,
-                data: yValues//uses data to plot y axis 
+                    label: 'Daily steps',
+                    backgroundColor:"rgba(173,10,173,1.0)",
+                    borderColor: "rgba(173,30,173,1)",
+                    fill: false,
+                    data: yValues//uses data to plot y axis 
                 },{
+                    label: 'Daily weight (in grams)',
                     data: SValues,
                     backgroundColor:"rgba(10,200,173,1.0)",
                     borderColor: "rgba(10,0,173,1)",
@@ -218,27 +220,32 @@ function getDataForGraph(){
             </tr>
             </table>
             </p>
-        <p>
-            <table>
-            <tr>
-                <th>Step goal</th>
-                <th>Weight goal</th>
-            </tr>
-            <tr>
-                <th id="stepMet">Placeholder</th>
-                <th id="weightMet">Placeholder</th>
-            </tr>
-            </table>
-        </p>
+       
 
 
 
         
     </div>
 
-    <div id="graphBox">
+    <div id="targetBox">
 
-        <p><h1 class="title">Set personal goals</p>
+        <p>
+            <table >
+            <tr>
+                <th>Step goal</th>
+                <th>Weight goal</th>
+            </tr>
+            <tr>
+                <th id="stepMettxt" >Placeholder</th>
+                <th id="weightMettxt">Placeholder</th>
+            </tr>
+            </table>
+        </p>
+
+        <p>
+            <div id="stepsMet">Not met today</div>
+            <div id="weightMet">Not met today</div>
+        </p>
         
 
 

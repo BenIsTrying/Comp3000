@@ -58,7 +58,23 @@ function step4( data, stepData){
     console.log(data[0].Weight_Day_01);
     console.log(stepData[0].Step_Day_01);
 
-    smallGraph(data, stepData);
+    step5(data, stepData);
+
+};
+function step5(weightData, stepData){
+    
+    //user data
+    fetch('http://localhost:9000/target')
+    .then(res => res.json())
+    .then(data => step6(data,weightData,stepData));
+
+};
+function step6( data,weightData, stepData){
+
+    console.log(data[0].Weight_Day_01);
+    console.log(stepData[0].Step_Day_01);
+
+    smallGraph(data,weightData, stepData);
 
 };
 
@@ -78,7 +94,7 @@ function step1(){
 
 };
 
-    function smallGraph(data, stepData) {
+    function smallGraph(data,weightData, stepData) {
 
         const d = new Date();
         let day = d.getDate();
@@ -135,18 +151,18 @@ function step1(){
         S20 = stepData[0].Step_Day_20, S25 = stepData[0].Step_Day_25, S30 = stepData[0].Step_Day_30;
         S31 = stepData[0].Step_Day_31;
 
-        W1 = data[0].Weight_Day_01, W6 = data[0].Weight_Day_06, W11 = data[0].Weight_Day_11;
-        W2 = data[0].Weight_Day_02, W7 = data[0].Weight_Day_07, W12 = data[0].Weight_Day_12;
-        W3 = data[0].Weight_Day_03, W8 = data[0].Weight_Day_08, W13 = data[0].Weight_Day_13;
-        W4 = data[0].Weight_Day_04, W9 = data[0].Weight_Day_09, W14 = data[0].Weight_Day_14;
-        W5 = data[0].Weight_Day_05, W10 = data[0].Weight_Day_10, W15 = data[0].Weight_Day_15;
+        W1 = weightData[0].Weight_Day_01, W6 = weightData[0].Weight_Day_06, W11 = weightData[0].Weight_Day_11;
+        W2 = weightData[0].Weight_Day_02, W7 = weightData[0].Weight_Day_07, W12 = weightData[0].Weight_Day_12;
+        W3 = weightData[0].Weight_Day_03, W8 = weightData[0].Weight_Day_08, W13 = weightData[0].Weight_Day_13;
+        W4 = weightData[0].Weight_Day_04, W9 = weightData[0].Weight_Day_09, W14 = weightData[0].Weight_Day_14;
+        W5 = weightData[0].Weight_Day_05, W10 = weightData[0].Weight_Day_10, W15 = weightData[0].Weight_Day_15;
 
-        W16 = data[0].Weight_Day_16, W21 = data[0].Weight_Day_21, W26 = data[0].Weight_Day_26;
-        W17 = data[0].Weight_Day_17, W22 = data[0].Weight_Day_22, W27 = data[0].Weight_Day_27;
-        W18 = data[0].Weight_Day_18, W23 = data[0].Weight_Day_23, W28 = data[0].Weight_Day_28;
-        W19 = data[0].Weight_Day_19, W24 = data[0].Weight_Day_24, W29 = data[0].Weight_Day_29;
-        W20 = data[0].Weight_Day_20, W25 = data[0].Weight_Day_25, W30 = data[0].Weight_Day_30;
-        W31 = data[0].Weight_Day_31;
+        W16 = weightData[0].Weight_Day_16, W21 = weightData[0].Weight_Day_21, W26 = weightData[0].Weight_Day_26;
+        W17 = weightData[0].Weight_Day_17, W22 = weightData[0].Weight_Day_22, W27 = weightData[0].Weight_Day_27;
+        W18 = weightData[0].Weight_Day_18, W23 = weightData[0].Weight_Day_23, W28 = weightData[0].Weight_Day_28;
+        W19 = weightData[0].Weight_Day_19, W24 = weightData[0].Weight_Day_24, W29 = weightData[0].Weight_Day_29;
+        W20 = weightData[0].Weight_Day_20, W25 = weightData[0].Weight_Day_25, W30 = weightData[0].Weight_Day_30;
+        W31 = weightData[0].Weight_Day_31;
 
 
 
@@ -181,11 +197,13 @@ function step1(){
         data: {
             labels: xValues,//shows x axis labels 
             datasets: [{
-            backgroundColor:"rgba(173,10,173,1.0)",
-            borderColor: "rgba(173,30,173,1)",
-            fill: false,
-            data: yValues//uses data to plot y axis 
-            },{
+                label: 'Daily steps',
+                backgroundColor:"rgba(173,10,173,1.0)",
+                borderColor: "rgba(173,30,173,1)",
+                fill: false,
+                data: yValues//uses data to plot y axis 
+                },{
+                label: 'Daily weight (in grams)',
                 data: SValues,
                 backgroundColor:"rgba(10,200,173,1.0)",
                 borderColor: "rgba(10,0,173,1)",
@@ -194,10 +212,8 @@ function step1(){
         },
         options: {
             legend: {display: true,
-                labels: {
-                     
-                    
-                }},
+                
+            },
             scales: {
                 yAxes: [{ticks: {min: 0, max:smallGraphHeight}}],
                 
@@ -224,7 +240,23 @@ function step1(){
     const lowStep = Math.min(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S30,S31);
     const lowWeight = Math.min(W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19,W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31);
 
+    const stepsGoalReached = data[0].StepTarget;
+    const weightGoalReached = data[0].WeightTarget;
+    console.log(stepsGoalReached, weightGoalReached);
 
+    if (step[day1-1] >= stepsGoalReached){
+        document.getElementById("stepsMet").innerHTML = "Goal reached!";
+        document.getElementById("stepsMet").style.backgroundColor = "lightgreen";
+    }
+    if (weight[day1-1] >= weightGoalReached){
+        document.getElementById("weightMet").innerHTML = "Goal reached!";
+        document.getElementById("weightMet").style.backgroundColor = "lightgreen";
+    }
+
+    
+
+    document.getElementById("stepMettxt").innerHTML = stepsGoalReached +" - Steps";
+    document.getElementById("weightMettxt").innerHTML = weightGoalReached/100 +" KG";
     document.getElementById("lStep").innerHTML = lowStep + " - Steps";
     document.getElementById("lWeight").innerHTML = lowWeight/100 + "KG";
     document.getElementById("lWeekWeight").innerHTML = lowWeightWeek/100 + "KG";
@@ -239,13 +271,15 @@ function step1(){
     const avgStepWeek = Math.mean(step[day1-1],step[day2-1],step[day3-1],step[day4-1],step[day5-1],step[day6-1],step[day7-1]);
     const avgWegihtWeek = Math.mean(weight[day1-1],weight[day2-1],weight[day3-1],weight[day4-1],weight[day5-1],weight[day6-1], weight[day7-1]);
 
-   checkMetGoal(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek);
+   checkMetGoal(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek,data);
 
 };
 
 function checkMetGoal(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek){
 
-    console.log(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek);//gotta work on this soon
+    console.log(avgStepMonth,avgStepMonth,avgStepWeek,avgWegihtWeek,data);//gotta work on this soon
+
+
 
 
 
