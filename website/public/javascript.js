@@ -236,10 +236,10 @@ function step1(){
     console.log(" progress here -> ",progressWidth, step[day7-1]);
     if (progressWidth > 100){
         progressWidth = 99.9;
-        document.getElementById("goalProgress").innerHTML = "100%";
+        document.getElementById("goalProgress").innerHTML = "100% of " + step[day7-1];
     }
     else{
-        document.getElementById("goalProgress").innerHTML = progressWidth+"%";
+        document.getElementById("goalProgress").innerHTML = progressWidth+"% of " + step[day7-1];
     }
     document.getElementById("greenBar").style.width = progressWidth+ "%";
 
