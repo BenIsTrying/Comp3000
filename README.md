@@ -20,8 +20,6 @@ Goal:
 
 Webpage 
 
-AI predictions 
-
 Data storing 
 
 Android app that sends data to the webpage 
@@ -30,9 +28,8 @@ Android app that sends data to the webpage
 
 Possible issues: 
 
-AI used on webpage (needs researching) 
 
-Connecting the android app to the webpages or databases 
+Connecting the android app to the webpages or databases (solved) 
 
 
 ## Trello board:
